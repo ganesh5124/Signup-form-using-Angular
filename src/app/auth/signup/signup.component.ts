@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Passwordmatch } from '../validator/passwordmatch';
 
 @Component({
   selector: 'app-signup',
@@ -19,7 +20,15 @@ export class signupComponent {
       Validators.minLength(4),
       Validators.maxLength(20)
     ]),
-    passwordConfirmation : new FormControl('')
-  })
+    passwordConfirmation : new FormControl('',[
+      Validators.required,
+      Validators.minLength(4),
+      Validators.maxLength(20)
+    ])
+  },
+  { validators:[this.passwordMatch.validate]}
+  ) 
+
+  constructor(public passwordMatch: Passwordmatch){ }
 }
 
