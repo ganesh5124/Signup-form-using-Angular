@@ -1,0 +1,25 @@
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 230px;
+    margin-top: 20px;
+}
+
+.field:last-of-type{
+    margin-bottom: 10px;
+}
+
+.button{
+    height: 35px;
+    width: 80px;
+    color: #4a4ae0;
+    background-color: rosybrown;
+}
+
+input{
+    height: 25px;
+    width: 249px;
+    border: 2px solid #b3f5c6;
+    border-radius: 3px;
+}
